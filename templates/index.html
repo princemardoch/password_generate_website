@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <h1>↓</h1>
+
+        <p class="password"> {{ mdp }} <span id="password"></span></p>
+
+        <form action="" method="POST" class="form">
+            <div class="avf">
+                <input type="checkbox" name="symbols" id="symbols" value="Symboles">
+                <label for="symbols">Symbols</label><br>
+                <input type="checkbox" name="numbers" id="numbers" value="Chiffres">
+                <label for="numbers">Numbers</label><br>
+                <input type="number" name="lgp" id="lgp" placeholder="Longeur" class="ipn">
+            </div>
+
+            <button type="submit" class="generate-button">Generate Password</button>
+        </form>
+        
+    </div>
+
+<style>
+    .ipn{
+        width: 70px;
+        height: 28px;
+        margin-left:10px;
+        outline: none;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    .avf{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    padding: 50px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    margin-top: -10px;
+}
+
+.password {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 25px;
+    margin-top:-5px;
+}
+
+.generate-button {
+    display: block;
+    width: 100%;
+    padding: 10px 60px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    outline: none;
+}
+
+.generate-button:hover {
+    background-color: #0056b3;
+}
+</style>
+
+</body>
+</html>
